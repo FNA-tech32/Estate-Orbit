@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// GitHub Pages configuration
+// Vercel / root-domain deploy: absolute asset paths so deep routes
+ // (e.g. /properties/2) still load /assets/*.js correctly.
 export default defineConfig({
   plugins: [react()],
-  base: '/Modern-Real-Estate/',
+  base: '/',
 })
